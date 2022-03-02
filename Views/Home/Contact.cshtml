@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title</h2>
+<h3>Use this information to communicate with me directly.</h3>
+
+<address>
+    Joshua Brinton Autry<br />
+    Chandler, AZ 85248<br />
+    <abbr title="Phone">P:</abbr>
+    480.408.6788
+</address>
+
+<address>
+    <strong>Email:</strong> <a href="mailto:joshuabrintonautry@gmail.com">joshuabrintonautry@gmail.com</a>
+</address>
+
+<address>
+    <strong>Spotify:</strong> <a href="http://open.spotify.com/user/peaceoutside">peaceoutside</a>
+</address>
+
+@section scripts{
+    <script>
+        $
+            (
+                () => {
+                    selectNavLink('#nav-link-contact');
+                }
+            )
+        ;
+    </script>
+}

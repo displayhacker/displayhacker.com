@@ -1,71 +1,75 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿html, body {
+    background-color: #000;
+    color: #FFF;
+    font: normal 12px "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+div#top-nav-list-container {
+    background-color:#101010;
+    margin:0; padding:1px;
+}
+div#top-nav-list-container ul {
+    background-color:#202020;
+    display:block;
+    margin:1px; padding:1px;
+}
+div#top-nav-list-container ul li {
+    background-color:#303030;
+    display:inline-block;
+    list-style-image:none;
+    list-style-position:inside;
+    list-style-type:none;
+    margin:1px; padding:1px;
+}
+div#top-nav-list-container ul li a {
+    display:block;
+    font-size:24px;
+    line-height:32px;
+    margin:1px; padding:0 24px;
+}
+div#top-nav-list-container ul li a:link,
+div#top-nav-list-container ul li a:visited {
+    background-color:#404040;
+    color:#A0A0A0;
+    text-decoration:none !important;
+}
+div#top-nav-list-container ul li a:hover,
+div#top-nav-list-container ul li a:active,
+div#top-nav-list-container ul li a.selected {
+    background-color:#A0A0A0;
+    color:#404040;
+    text-decoration:none !important;
 }
 
-/* Provide sufficient contrast against white background */
+table#index-table {
+    background-color: #D4D0C8;
+    border-color: #C0C0C0 #808080 #808080 #C0C0C0;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+    width:100%;
+}
+table#index-table th, table#index-table td {
+    border-color: #808080 #C0C0C0 #C0C0C0 #808080;
+    border-style: solid;
+    border-width: 1px;
+    padding:2px 4px;
+    vertical-align:top;
+    width:33.33%;
+}
+table#index-table th {
+    background-color:#000080;
+    color:#FFF;
+    font-weight:bold;
+    text-align:center;
+}
+table#index-table td {
+    background-color:#404040;
+    color:#C0C0C0;
+    text-align:left;
+}
 a {
-  color: #0366d6;
+    color:#C0C0FF;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+table#index-table td a {
+    color: #FFF;
 }

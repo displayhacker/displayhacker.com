@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Stare Cat";
+}
+
+@section styles{
+    <style>
+        div#canvas-bg {
+            background-color: #000;
+            margin: 0; padding: 0;
+            position: relative;
+            width: 512px; height: 512px;
+        }
+        canvas {
+            position: absolute;
+            top: 0; left: 0;
+        }
+        table {
+            margin:32px 0;
+            width: 100%;
+        }
+        table th, table td {
+            vertical-align: top;
+        }
+        table th {
+            text-align: center;
+        }
+        table td.canvas-cell {
+            padding: 0 16px 0 0;
+            width: 512px;
+        }
+        table td.text-cell {
+            background-color: #202020;
+            padding: 8px;
+            width: 99%;
+        }
+    </style>
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <tr>
+        <th>
+            <p>Stare Cat.</p>
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td class="canvas-cell">
+            <div id="canvas-bg"></div>
+        </td>
+        <td class="text-cell">
+            <p>
+                Stare Cat.
+            </p>
+        </td>
+    </tr>
+</table>
+
+@section scripts{
+    <script src="@Url.Content("~/js/p5.js")"></script>
+    <script src='@Url.Content($"~/js/stare_cat.js?no-cache={Guid.NewGuid()}")'></script>
+    <script>
+        $
+            (
+				() => {
+					function setPosition() {
+						var top = $('#canvas-bg').offset().top + 'px';
+						var left = $('#canvas-bg').offset().left + 'px';
+						$('canvas').css('top', top);
+						$('canvas').css('left', left);
+						setTimeout(() => { setPosition(); }, 1000);
+					}
+					setPosition();
+				}
+            )
+		;
+    </script>
+}

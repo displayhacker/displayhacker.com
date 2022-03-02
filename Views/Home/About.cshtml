@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    My name is Joshua Brinton Autry and I'm a software engineer living in Chandler, AZ.
+</p>
+
+@section scripts{
+    <script>
+        $
+            (
+                () => {
+                    selectNavLink('#nav-link-about');
+                }
+            )
+        ;
+    </script>
+}

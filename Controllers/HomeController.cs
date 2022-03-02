@@ -23,7 +23,32 @@ namespace DisplayHacker.com.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Epicycloids()
+        {
+            return View();
+        }
+
+        public IActionResult Phyllotaxis()
+        {
+            return View();
+        }
+
+        public IActionResult Plasma()
+        {
+            return View();
+        }
+
+        public IActionResult StareCat()
         {
             return View();
         }

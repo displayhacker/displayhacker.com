@@ -1,8 +1,90 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron">
+    <h1>Display Hacker</h1>
+    <p class="lead">My name is Joshua Brinton Autry. Welcome to my website.</p>
 </div>
+
+<table id="index-table" cellspacing="1">
+    <tr>
+        <th>
+            Display Hacks
+        </th>
+        <th>
+            FL Studio Experiments
+        </th>
+        <th>
+            DJ Mixes
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>
+                    <a href="@Url.Action("Epicycloids")">Epicycloids</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Phyllotaxis")">Phyllotaxis</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("StareCat")">Stare Cat</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Plasma")">Plasma</a>
+                </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://soundcloud.com/neuxsaed/145-bpm-fl-studio-experiments" class="open-in-new-window">145 BPM FL Studio Experiments</a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/neuxsaed/120-bpm-fl-studio-experiment" class="open-in-new-window">120 BPM FL Studio Experiment (120 Half)</a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/neuxsaed/120-bpm-fl-studio-experiment-1" class="open-in-new-window">120 BPM FL Studio Experiment (Denots)</a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/neuxsaed/120-bpm-fl-studio-experiment-2" class="open-in-new-window">120 BPM FL Studio Experiment (Moxy)</a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/neuxsaed/120-bpm-fl-studio-experiment-3" class="open-in-new-window">120 BPM FL Studio Experiment (Tribal Alt)</a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/neuxsaed/145-bpm-fl-studio-experiment" class="open-in-new-window">145 BPM FL Studio Experiment (Weird Arp)</a>
+                </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>
+                    <a href="https://www.mixcloud.com/neuxsaed/chocolate-with-moxy/" class="open-in-new-window">Chocolate With Moxy (psytrance)</a>
+                </li>
+                <li>
+                    <a href="https://www.mixcloud.com/neuxsaed/neuxsaed-its-not-hip-hop-its-electro/" class="open-in-new-window">It's Not Hip Hop, It's Electro (electro house)</a>
+                </li>
+                <li>
+                    <a href="https://www.mixcloud.com/neuxsaed/if-you-had-robot-ears/" class="open-in-new-window">If You Had Robot Ears (electro house, trance)</a>
+                </li>
+                <li>
+                    <a href="https://www.mixcloud.com/neuxsaed/advent-guard/" class="open-in-new-window">Advent Guard (psytrance)</a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+@section scripts{
+    <script>
+        $
+            (
+                () => {
+                    selectNavLink('#nav-link-home');
+                }
+            )
+        ;
+    </script>
+}
